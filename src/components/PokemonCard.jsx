@@ -1,4 +1,4 @@
-
+import PropTypes from 'prop-types';
 
 
 function PokemonCard({nom, img}) {
@@ -6,10 +6,13 @@ function PokemonCard({nom, img}) {
     <>
       <p>Pokemon: {nom}</p>
       {img !== undefined ? <img src={img} alt={"pas d'image affiché pour " + nom} /> : <p>???</p>}
-      {/* <img src={img} alt={nom} /> */}
     </>
   )
+}
 
+PokemonCard.propTypes = {
+  nom: PropTypes.string,
+  img: PropTypes.string,
 
 
 
